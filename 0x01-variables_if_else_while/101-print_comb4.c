@@ -1,32 +1,43 @@
 #include <stdio.h>
 
 /**
- * main - Prints all possible combinations of three different digits,
- *        in ascending order, separated by a comma followed by a space.
- *
- * Return: Always 0.
- */
+  * main - Write a program that prints all possible different combinations of
+  * three digits, the digits must be separted by a comma and space, the digits
+  * must be different,0,1 and 2 combination are considered the same, must Print
+  * only the smallest combination of three digits,Numbers should be printed in
+  * ascending order, with three digits, only use the putchar function,only use
+  * putchar six times maximum in your code, not allowed to use any variable of
+  * type char, all your code should be in the main function.
+  */
 int main(void)
 {
-	int digit1, digit2, digit3;
+	int i = '0';
+	int j = '0';
+	int k = '0';
 
-	for (digit1 = 0; digit1 < 8; digit1++)
+	for (k = '0'; k <= '9'; k++)
 	{
-		for (digit2 = digit1 + 1; digit2 < 9; digit2++)
+		for (j = '0'; j <= '9'; j++)
 		{
-			for (digit3 = digit2 + 1; digit3 < 10; digit3++)
+			for (i = '0'; i <= '9'; i++)
 			{
-				putchar((digit1 % 10) + '0');
-				putchar((digit2 % 10) + '0');
-				putchar((digit3 % 10) + '0');
-
-				if (digit1 == 7 && digit2 == 8 && digit3 == 9)
-				continue;				
-				putchar(',');
-				putchar(' ');
+				if (!((i == j) || (j == k) || (j > i) || 
+							(k > j)))
+				{
+					putchar(k);
+					putchar(j);
+					putchar(i);
+					if (!(i == '9' && k == '7' &&
+								j == '8'))
+					{
+						putchar(',');
+						putchar(' ');
+					}
+				}
 			}
 		}
 	}
 	putchar('\n');
 	return (0);
 }
+
