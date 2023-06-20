@@ -8,6 +8,7 @@
   * ascending order, with three digits, only use the putchar function,only use
   * putchar six times maximum in your code, not allowed to use any variable of
   * type char, all your code should be in the main function.
+  * Return: Always 0 (Success)
   */
 int main(void)
 {
@@ -21,7 +22,7 @@ int main(void)
 		{
 			for (i = '0'; i <= '9'; i++)
 			{
-				if (!((i == j) || (j == k) || (j > i) || 
+				if (!((i == j) || (j == k) || (j > i) ||
 							(k > j)))
 				{
 					putchar(k);
