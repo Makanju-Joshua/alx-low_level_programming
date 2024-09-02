@@ -1,5 +1,5 @@
-#ifndef MAIN_HEADER_H
-#define MAIN_HEADER_H
+#ifndef LISTS
+#define LISTS
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -7,7 +7,7 @@
 
 /**
  * struct list_s - singly linked list
- * str: string - (malloc'ed string)
+ * str: string - (malloc string)
  * @len: length of the string
  * @next: points to the next node
  * Description: singly linked list node structure
